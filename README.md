@@ -83,12 +83,13 @@ The app is configured for GitHub Pages with base path `/todos-app/`.
 
 ### Automatic (GitHub Actions)
 
-Pushes to `main` deploy automatically via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+Pushes to `main` deploy automatically via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow builds the app and pushes the output to the `build` branch.
 
 **One-time setup** in the GitHub repo:
 
 1. Go to **Settings → Pages**
-2. Set **Source** to **GitHub Actions**
+2. Set **Source** to **Deploy from a branch**
+3. Choose branch **`build`** and folder **`/ (root)`**
 
 After that, every push to `main` publishes to [ashutilov.github.io/todos-app](https://ashutilov.github.io/todos-app/).
 
