@@ -81,13 +81,27 @@ src/
 
 The app is configured for GitHub Pages with base path `/todos-app/`.
 
-1. Build the project:
+### Automatic (GitHub Actions)
 
-   ```bash
-   yarn build
-   ```
+Pushes to `main` deploy automatically via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
-2. Deploy the contents of `dist/` to the `build` branch (used by GitHub Pages).
+**One-time setup** in the GitHub repo:
+
+1. Go to **Settings → Pages**
+2. Set **Source** to **GitHub Actions**
+
+After that, every push to `main` publishes to [ashutilov.github.io/todos-app](https://ashutilov.github.io/todos-app/).
+
+You can also trigger a deploy manually from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**.
+
+### Manual preview
+
+```bash
+yarn build
+yarn preview
+```
+
+Open [http://localhost:4173/todos-app/](http://localhost:4173/todos-app/) to preview the production build locally.
 
 ## License
 
