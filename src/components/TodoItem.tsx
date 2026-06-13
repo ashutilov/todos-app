@@ -1,4 +1,4 @@
-import classes from "./TodoItem.module.css";
+import classes from './TodoItem.module.css';
 
 const TodoItem: React.FC<{
   text: string;
