@@ -1,47 +1,94 @@
 # Todos App
 
-A simple todos application built with React and TypeScript, powered by [Vite](https://vitejs.dev/).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
 
-## Setup
+A simple todos application built with React and TypeScript. Add todos, view them in a list, and remove items you no longer need.
+
+**Live demo:** [ashutilov.github.io/todos-app](https://ashutilov.github.io/todos-app/)
+
+## Features
+
+- Add todos via a form
+- View all todos in a list
+- Remove individual todos
+- Shared state via React Context
+
+## Tech stack
+
+| Category | Tools                                |
+| -------- | ------------------------------------ |
+| UI       | React 18, shadcn/ui, Tailwind CSS v4 |
+| Language | TypeScript                           |
+| Build    | Vite                                 |
+| Testing  | Vitest, Testing Library              |
+| Tooling  | Yarn 4, Prettier                     |
+
+## Getting started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [Yarn](https://yarnpkg.com/) 4.x (Corepack is supported via `packageManager` in `package.json`)
+
+### Install
 
 ```bash
 yarn install
 ```
 
-## Available Scripts
+### Development
 
-### `yarn dev`
+```bash
+yarn dev
+```
 
-Runs the app in development mode at [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173/todos-app/](http://localhost:5173/todos-app/) in your browser.
 
-### `yarn build`
+## Scripts
 
-Builds the app for production to the `dist` folder.
+| Command              | Description                                   |
+| -------------------- | --------------------------------------------- |
+| `yarn dev`           | Start the Vite dev server                     |
+| `yarn build`         | Type-check and build for production (`dist/`) |
+| `yarn preview`       | Preview the production build locally          |
+| `yarn test`          | Run Vitest in watch mode                      |
+| `yarn test:run`      | Run the test suite once                       |
+| `yarn test:coverage` | Run tests with coverage report                |
+| `yarn format`        | Format the codebase with Prettier             |
+| `yarn format:check`  | Check formatting without writing changes      |
 
-### `yarn preview`
+## Project structure
 
-Serves the production build locally for testing.
-
-### `yarn format`
-
-Formats the codebase with Prettier.
-
-### `yarn format:check`
-
-Checks formatting without writing changes.
-
-### `yarn test`
-
-Runs Vitest in watch mode.
-
-### `yarn test:run`
-
-Runs the test suite once.
-
-### `yarn test:coverage`
-
-Runs tests and reports code coverage.
+```
+src/
+├── components/       # UI components (NewTodo, Todos, TodoItem, shadcn/ui)
+├── lib/              # Shared utilities (cn helper)
+├── models/           # Domain models (Todo)
+├── store/            # React Context state (todos-context)
+├── test/             # Vitest setup
+├── App.tsx           # Root layout
+└── index.tsx         # App entry point
+```
 
 ## Deployment
 
-The app is configured for GitHub Pages with base path `/todos-app/`. After building, deploy the contents of `dist/` to the `build` branch.
+The app is configured for GitHub Pages with base path `/todos-app/`.
+
+1. Build the project:
+
+   ```bash
+   yarn build
+   ```
+
+2. Deploy the contents of `dist/` to the `build` branch (used by GitHub Pages).
+
+## License
+
+Private project.
