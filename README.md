@@ -30,6 +30,18 @@ Formats the codebase with Prettier.
 
 Checks formatting without writing changes.
 
+### `yarn test`
+
+Runs Vitest in watch mode.
+
+### `yarn test:run`
+
+Runs the test suite once.
+
+### `yarn test:coverage`
+
+Runs tests and reports code coverage.
+
 ## Deployment
 
 The app is configured for GitHub Pages with base path `/todos-app/`. After building, deploy the contents of `dist/` to the `build` branch.
