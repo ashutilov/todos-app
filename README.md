@@ -22,6 +22,14 @@ Builds the app for production to the `dist` folder.
 
 Serves the production build locally for testing.
 
+### `yarn format`
+
+Formats the codebase with Prettier.
+
+### `yarn format:check`
+
+Checks formatting without writing changes.
+
 ## Deployment
 
 The app is configured for GitHub Pages with base path `/todos-app/`. After building, deploy the contents of `dist/` to the `build` branch.

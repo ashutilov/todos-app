@@ -1,6 +1,6 @@
-import { useRef, useContext } from "react";
-import { TodosContext } from "../store/todos-context";
-import classes from "./NewTodo.module.css";
+import { useRef, useContext } from 'react';
+import { TodosContext } from '../store/todos-context';
+import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
   const todosCtx = useContext(TodosContext);
@@ -16,7 +16,7 @@ const NewTodo: React.FC = () => {
       return;
     } else {
       todosCtx.addTodo(enteredText);
-      todoTextInputRef.current!.value = "";
+      todoTextInputRef.current!.value = '';
     }
   };
 
