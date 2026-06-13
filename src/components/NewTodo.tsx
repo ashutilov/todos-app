@@ -1,5 +1,5 @@
-import { useRef, useContext } from 'react';
-import { TodosContext } from '../store/todos-context';
+import {useRef, useContext} from 'react';
+import {TodosContext} from '../store/todos-context';
 import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
@@ -23,12 +23,7 @@ const NewTodo: React.FC = () => {
   return (
     <form onSubmit={submitHandler} className={classes.form}>
       <label htmlFor="text">ToDo label</label>
-      <input
-        type="text"
-        id="text"
-        ref={todoTextInputRef}
-        autoComplete="off"
-      ></input>
+      <input type="text" id="text" ref={todoTextInputRef} autoComplete="off"></input>
       <button>Add todo</button>
     </form>
   );

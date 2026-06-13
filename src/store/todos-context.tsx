@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import React from 'react';
 import Todo from '../models/todo';
 
@@ -37,11 +37,7 @@ const TodosContextProvider: React.FC = (props) => {
     removeTodo: removeTodoHandler,
   };
 
-  return (
-    <TodosContext.Provider value={contextValue}>
-      {props.children}
-    </TodosContext.Provider>
-  );
+  return <TodosContext.Provider value={contextValue}>{props.children}</TodosContext.Provider>;
 };
 
 export default TodosContextProvider;
