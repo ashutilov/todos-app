@@ -2,6 +2,7 @@
   "name": "todos-typescript-cra",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@4.16.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
