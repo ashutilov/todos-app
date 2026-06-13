@@ -1,30 +1,30 @@
-import {useRef, useContext} from 'react';
+import {useContext, useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
 import {TodosContext} from '../store/todos-context';
-import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
   const todosCtx = useContext(TodosContext);
-
-  const todoTextInputRef = useRef<HTMLInputElement>(null);
+  const [text, setText] = useState('');
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
 
-    let enteredText = todoTextInputRef.current!.value;
-
-    if (enteredText.trim().length === 0) {
+    if (text.trim().length === 0) {
       return;
-    } else {
-      todosCtx.addTodo(enteredText);
-      todoTextInputRef.current!.value = '';
     }
+
+    todosCtx.addTodo(text);
+    setText('');
   };
 
   return (
-    <form onSubmit={submitHandler} className={classes.form}>
-      <label htmlFor="text">ToDo label</label>
-      <input type="text" id="text" ref={todoTextInputRef} autoComplete="off"></input>
-      <button>Add todo</button>
+    <form onSubmit={submitHandler} className="flex flex-col gap-3">
+      <label htmlFor="text" className="font-medium">
+        ToDo label
+      </label>
+      <Input type="text" id="text" value={text} onChange={(event) => setText(event.target.value)} autoComplete="off" />
+      <Button type="submit">Add todo</Button>
     </form>
   );
 };
